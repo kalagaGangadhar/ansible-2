@@ -1,5 +1,6 @@
 - name: vars
   hosts: localhost
+  connection: local
   become: true
   vars:
     url: www.google.com
