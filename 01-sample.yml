@@ -4,11 +4,11 @@
   tasks:
     - name: install nginx server
       ansible.builtin.yum:
-        - name: nginx
-          state: present
+        name: nginx
+        state: present
 
     - name: start service
       ansible.builtin.systemd:
-        - name: nginx
-          state: restarted
-          enabled: yes
+        name: nginx
+        state: restarted
+        enabled: yes
