@@ -1,0 +1,10 @@
+- name: template
+  hosts: all
+  become: true
+  vars:
+    fruit_name: apple
+  tasks:
+    - name: coping
+      ansible.builtin.template:
+        src: test.txt
+        dest: /tmp/test.txt
