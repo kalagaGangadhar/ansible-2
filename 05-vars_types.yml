@@ -7,5 +7,6 @@
     for_sale: 'true'
   tasks:
     - name: print variables
+      ansible.builtin.debug:
       msg: name - "{{ name }}", quantity - "{{ quantity }}"
       when: for_sale
