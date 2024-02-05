@@ -3,9 +3,14 @@
   connection: local
   become: true
   vars:
-    url: www.google.com
+    url: play.google.com
   tasks:
     - name: print variable
       ansible.builtin.debug:
         msg: URL= {{url}}
 
+    - name: task variable
+      ansible.builtin.debug:
+        msg: url = {{url}}
+      vars:
+        url: tasks.google.com

@@ -1,0 +1,11 @@
+- name: vars types
+  hosts: all
+  become: true
+  vars:
+    - name: apple
+      quantity: 100
+      for_sale: 'true'
+  tasks:
+    - name: print variables
+      msg: name - "{{ name }}", quantity - "{{ quantity }}"
+      when: for_sale
